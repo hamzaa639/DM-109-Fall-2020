@@ -1,6 +1,5 @@
-# DM-109-Fall-2020
-#DM 109 Fall 2020: Course Repository#
-###PROJECT MEMBERS###
+# DM 109 Fall 2020: Course Repository #
+### PROJECT MEMBERS ###
 StdID | Name
 ------------ | -------------
 **63790* | **Muhammad Hamza** <!--this is the group leader in bold-->
