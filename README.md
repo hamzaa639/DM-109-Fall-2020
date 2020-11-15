@@ -4,7 +4,7 @@ StdID | Name
 ------------ | -------------
 **63790* | **Muhammad Hamza** <!--this is the group leader in bold-->
 62976 | Ahtisham Ali
-62584 | wajid
+62584 | wajid Khan
 <!-- Replace name and student ids with acutally group member names and ids-->
 
 ## Description ##
