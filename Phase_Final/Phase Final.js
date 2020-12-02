@@ -7,11 +7,11 @@
 window.onload = function () {
 	var chart = new CanvasJS.Chart("chartContainer", {
 		title:{
-			text: "Efficiency of Warshall Algorithm on different sizes of 2D matrices "              
+			text: "Phase_Final"              
 		},
 		data: [              
 		{
-			
+			// Change type to "doughnut", "line", "splineArea", etc.
 			type: "column",
 			dataPoints: [
 				{ label: "4 x 4",  y: 0.15 },
@@ -30,7 +30,7 @@ window.onload = function () {
 </script>
 </head>
 <body>
-<div id="chartContainer" style="height: 300px; max-width: 920px; margin: 0px auto;"></div>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
 <h4><a href="https://github.com/hamzaa639/DM-109-Fall-2020/tree/main/Phase_Final" target="blank">GitHub</a></h4>
 </body>
