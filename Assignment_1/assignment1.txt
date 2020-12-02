@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Floyd Warshall Algorithm</title>
+	<meta charset="utf-8">
+	
+</head>
+<body style="font-size: 16pt;">
+	<h1>Floyd Warshall Algorithm</h1>
+	<h2>63790 - Mohammad Hamza</h2><!--This is the group leader-->
+	<h3>62976 - Ahtisham Ali</h3><!--This is the 2nd Member of the group-->
+	<h3>62584 - Wajid Khan</h3><!--This is the 3rd Member of the group-->
+	<h4><a href="https://github.com/hsn9696/DM-109-Fall-2020?fbclid=IwAR10jte0p0O2xkcYlhlts-GSmU7GnoLsXxWgjHEPxEwslxI_rhgCQqT47WI" target="blank">GitHub</a></h4><!--Replace about:blank with your GitHub repository folder for assignment 1. -->
+	<p> 
+		<button id="btnRun" onclick="takingvaluesfromuser()">Run</button>  
+	</p>
+	<p>
+		<textarea id="txtInput" rows="10" cols="30" placeholder="
+		0, 0, 0, 1   
+		1, 0, 1, 1
+		0, 1, 1, 0
+		0, 1, 0, 1"
+		style="font-size: 20pt;"></textarea>
+	</p>
+	<div id="divOutput" style="border: 2px solid green;padding: 10px 10px 10px 10px;">
+		<script>
+document.getElementById("divOutput").value = temp3;
 
+</script>
+	</div>
+	
+	<script>
+
+var taInput, divOutput;
+var btnRun;
+var geek ;
+
+
+
+function takingvaluesfromuser()
+{
+var rows =4;
+  var cols =4;
+  var matrice = [] ;
+ for (var i = 0; i < rows; i++) {
+        matrice.push([0])
+        input  = document.getElementById("txtInput").value;
+        for (var j = 0; j < cols; j++) {
+            matrice[i][j] = input.split(' ');
+        }
+    }
+    return matrice;
+}
+window.onload = function() 
+{
+	console.log("Hooray! Its working");
+	taInput = document.getElementById('txtInput');
+	divOutput = document.getElementById('divOutput');
+	btnRun = document.getElementById('btnRun');
+} //end window.onload
+
+function runFwAlgo()
+{
+	console.log("Running Floyd Warshall")
+	divOutput.innerHTML="<p>Transitive Closure of the Relation Is:</p>"
+	floydWarshallAlgorithm()
+	divOutput.innerHTML+="Add your output here. Remove this!"
+	//Get Input from 
+}//end run
+
+
+	//Implement your solution here
+  function floydWarshall(matrice) {
+  var temp = [];
+  var temp2 = [];
+  var temp3 = [];
+  
+  for (var k = 0; k < matrice.length; k++) {
+    for (var i = 0; i < matrice.length; i++) {
+      for (var j = 0; j < matrice.length; j++) {
+        temp.push(matrice[j][i] * matrice[k][j]);
+      }
+      if (sum(temp) > 0) {
+        temp2.push(1);
+      } else {
+        temp2.push(0);
+      }
+      temp = [];
+    }
+    temp3.push(temp2);
+    temp2 = [];
+  }
+    return temp3;
+}
+
+       function sum(arr) {
+  return arr.reduce(function(a, b) {
+    return a + b;
+  }, 0);
+</script>
+</body>
+</html>
